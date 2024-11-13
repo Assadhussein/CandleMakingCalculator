@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candle Making Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="calculator">
+    <h2>Candle Making Calculator</h2>
+    <table>
+        <tr>
+            <th colspan="2">Total Fill (oz)</th>
+            <td class="input-cell"><input type="number" id="totalFill" step="0.01"></td>
+        </tr>
+        <tr>
+            <th colspan="2">Fragrance Oil %</th>
+            <td class="input-cell"><input type="number" id="fragranceOil" step="0.01">%</td>
+        </tr>
+        <tr>
+            <th colspan="2">Total Wax (oz)</th>
+            <td class="output-cell"><span id="totalWax">0</span></td>
+        </tr>
+        <tr>
+            <th colspan="2">Total FO (oz)</th>
+            <td class="output-cell"><span id="totalFO">0</span></td>
+        </tr>
+        <tr>
+            <th>FO Name</th>
+            <th>FO (%)</th>
+            <th>FO Amount (oz)</th>
+        </tr>
+        <tr>
+            <td class="input-cell"><input type="text" id="fo1Name" placeholder="Fragrance Oil 1"></td>
+            <td class="input-cell"><input type="number" id="fo1Percentage" step="0.01">%</td>
+            <td class="output-cell"><span id="fo1Amount">0.10</span></td>
+        </tr>
+        <tr>
+            <td class="input-cell"><input type="text" id="fo2Name" placeholder="Fragrance Oil 2"></td>
+            <td class="input-cell"><input type="number" id="fo2Percentage" step="0.01">%</td>
+            <td class="output-cell"><span id="fo2Amount">0.10</span></td>
+        </tr>
+        <tr>
+            <td class="input-cell"><input type="text" id="fo3Name" placeholder="Fragrance Oil 3"></td>
+            <td class="input-cell"><input type="number" id="fo3Percentage" step="0.01">%</td>
+            <td class="output-cell"><span id="fo3Amount">0.00</span></td>
+        </tr>
+        <tr>
+            <td class="input-cell"><input type="text" id="fo4Name" placeholder="Fragrance Oil 4"></td>
+            <td class="input-cell"><input type="number" id="fo4Percentage" step="0.01">%</td>
+            <td class="output-cell"><span id="fo4Amount">0.00</span></td>
+        </tr>
+        <tr>
+            <td class="input-cell"><input type="text" id="fo5Name" placeholder="Fragrance Oil 5"></td>
+            <td class="input-cell"><input type="number" id="fo5Percentage" step="0.01">%</td>
+            <td class="output-cell"><span id="fo5Amount">0.00</span></td>
+        </tr>
+        <tr class="total-row">
+            <td>Total FO</td>
+            <td><span id="totalFOPercentage">100.00</span>%</td>
+            <td><span id="totalFOAmount">0.20</span></td>
+        </tr>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
