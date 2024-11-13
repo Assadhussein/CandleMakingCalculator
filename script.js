@@ -2,7 +2,7 @@ function calculate() {
     const totalFill = parseFloat(document.getElementById("totalFill").value) || 0;
     const fragranceOil = parseFloat(document.getElementById("fragranceOil").value) || 0;
 
-    const totalWax = totalFill / (1 + (fragranceOil/100));
+    const totalWax = totalFill / (1 + (fragranceOil / 100));
     const totalFO = totalFill - totalWax;
 
     document.getElementById("totalFO").textContent = totalFO.toFixed(2);
@@ -24,7 +24,17 @@ function calculate() {
         document.getElementById(`fo${i + 1}Amount`).textContent = foAmount.toFixed(2);
     }
 
-    document.getElementById("totalFOAmount").textContent = totalFO.toFixed(2);
+    // Sum up all calculated FO amounts
+    const fo1Amount = parseFloat(document.getElementById("fo1Amount").textContent) || 0;
+    const fo2Amount = parseFloat(document.getElementById("fo2Amount").textContent) || 0;
+    const fo3Amount = parseFloat(document.getElementById("fo3Amount").textContent) || 0;
+    const fo4Amount = parseFloat(document.getElementById("fo4Amount").textContent) || 0;
+    const fo5Amount = parseFloat(document.getElementById("fo5Amount").textContent) || 0;
+
+const totalFOAmountSum = parseFloat((fo1Amount + fo2Amount + fo3Amount + fo4Amount + fo5Amount).toFixed(2));
+
+// Display the accumulated FO amount in totalFOAmount
+document.getElementById("totalFOAmount").textContent = totalFOAmountSum.toFixed(2);
 }
 
 document.querySelectorAll('input').forEach(input => {
