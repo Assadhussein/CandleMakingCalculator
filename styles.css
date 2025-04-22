@@ -105,3 +105,101 @@ body {
 .calculator button:hover {
     background-color: #45a049;
 }
+
+/* Timer Section Styling */
+.timer-section {
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.timer-section h3 {
+    margin-top: 0;
+    text-align: center;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.preset-buttons,
+.custom-timer,
+.timer-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.preset-buttons button,
+.custom-timer button,
+.timer-controls button {
+    padding: 8px 14px;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.preset-buttons button {
+    background-color: #4caf50;
+    color: white;
+}
+
+.custom-timer button {
+    background-color: #4caf50;
+    color: white;
+}
+
+.timer-controls button:nth-child(1) { /* Pause */
+    background-color: #ff9800;
+    color: white;
+}
+
+.timer-controls button:nth-child(2) { /* Resume */
+    background-color: #2196f3;
+    color: white;
+}
+
+.timer-controls button:nth-child(3) { /* Reset */
+    background-color: #f44336;
+    color: white;
+}
+
+.preset-buttons button:hover,
+.custom-timer button:hover,
+.timer-controls button:hover {
+    opacity: 0.9;
+}
+
+.custom-timer input {
+    padding: 8px;
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80px;
+}
+
+.countdown-display {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Sticky countdown display at bottom for visibility */
+.countdown-display.sticky {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px 20px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
