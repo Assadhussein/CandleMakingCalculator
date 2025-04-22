@@ -71,8 +71,30 @@
             <td><span id="totalFOAmount"></span>0</td>
         </tr>
     </table>
+    <div class="timer-section">
+        <h3>Timer</h3>
+        <div class="preset-buttons">
+            <button onclick="startTimer(2)">2 min</button>
+            <button onclick="startTimer(4)">4 min</button>
+            <button onclick="startTimer(15)">15 min</button>
+        </div>
+        <div class="custom-timer">
+            <input type="number" id="customTimer" placeholder="Enter minutes" min="1">
+            <button onclick="startCustomTimer()">Start</button>
+        </div>
+        <div class="countdown-display">
+            Time Remaining: <span id="countdown">--:--</span>
+            <div class="timer-controls">
+                <button onclick="pauseTimer()">Pause</button>
+                <button onclick="resumeTimer()">Resume</button>
+                <button onclick="resetTimer()">Reset</button>
+            </div>
+        </div>
+    </div>
 </div>
 
+</script>
+<audio id="timerSound" src="alarm.mp3" preload="auto"></audio>
 <script src="script.js"></script>
 </body>
 </html>
